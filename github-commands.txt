@@ -1,5 +1,12 @@
 Github Commands 🐙 
-Check Github account
+
+Check Github account...
 git config -l (helps identify Github account)
-Check current working Branch
+
+Check current working Branch...
 git rev-parse --abbrev-ref HEAD
+
+Create multiple branches on Jira Ticket...
+git checkout -b ENG-12345/create-s3-bucket
+git checkout -b ENG-12345/secure-s3-bucket
+git checkout -b ENG-12345/update-s3-bucket
