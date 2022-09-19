@@ -1,0 +1,5 @@
+Github Commands 🐙 
+Check Github account
+git config -l (helps identify Github account)
+Check current working Branch
+git rev-parse --abbrev-ref HEAD
