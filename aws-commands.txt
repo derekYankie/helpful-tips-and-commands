@@ -1,0 +1,25 @@
+AWS Commands ☁️
+
+Check IAM account or role...
+aws sts get-caller-identity
+
+List Volumes showing attachment using Dictionary Notation
+aws ec2 describe-volumes \
+  --query 'Volumes[*].{ID:VolumeId,InstanceId:Attachments[0].InstanceId,AZ:AvailabilityZone,Size:Size}
+
+List instances as a table
+aws ec2 describe-instances --instance-ids i-abc123ef i-aaaZZ2468 --query "Reservations[*].Instances[*].{name: Tags[?Key=='Name'] | [0].Value, instance_id: InstanceId, ip_address: PrivateIpAddress, state: State.Name}" --output table
+----------------------------------------------------------
+|                    DescribeInstances                   |
++-------------+----------------+--------------+----------+
+| instance_id |  ip_address    |    name      |  state   |
++-------------+----------------+--------------+----------+
+|  i-abc123ef |  99.99.99.01   |  name1       |  running |
+|  i-aaZZ2468 |  99.99.99.02   |  name2       |  running |
++-------------+----------------+--------------+----------+
+
+View all Route 53 record names and their type for a zone
+aws route53 list-resource-record-sets \
+      --hosted-zone-id HOSTED_ZONE_ID \
+	  --output text \
+--query "ResourceRecordSets[].[join(': ',[Name,Type])]"
