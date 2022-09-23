@@ -1,20 +1,19 @@
 # helpful-tips-and-commands
 This folder is a collection of helpful tips and commands I use for work
 ## Table of Contents
-[Mac Commands](#mac-cmd)
-[Github Commands](#github-cmd)
-[AWS Commands](#docker-cmd)
-<a name="github-cli"></a>
-### Mac Commands 💻
-1. Check IAM `account` or role 
-<a name="mac-cli"></a>
+- [Mac](#mac)
+- [Github](#github)
+- [AWS](#aws)
+
+# Mac   
+1. Copy current path to clipboard 💻
 
     ```bash
     pwd | pbcopy
     ```
 ---
-### Github Commands 🐙 
-1. Check Github `account`
+# Github 
+1. Check Github `account`🐙
 
     ```bash
     git config -l
@@ -25,8 +24,8 @@ This folder is a collection of helpful tips and commands I use for work
     git rev-parse --abbrev-ref HEAD
     ```
 ---
-### AWS Commands ☁️ 
-1. Check IAM `account` or role 
+# AWS 
+1. Check IAM `account` or `role`☁️ 
 <a name="aws-cli"></a>
 
     ```bash
