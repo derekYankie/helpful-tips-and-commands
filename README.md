@@ -36,7 +36,8 @@ This folder is a collection of helpful tips and commands I use for work
 <a name="aws-cli"></a>
 
     ```bash
-    aws ec2 describe-instances
+    aws ec2 describe-instances \
+    --filters Name=availability-zone,Values=us-east-2c
     ```
 ---
 
