@@ -13,7 +13,7 @@ This folder is a collection of helpful tips and commands I use for work
     ```
 ---
 # Github 
-1. Check Github `account`🐙
+1. Check Github `account` :octocat:
 
     ```bash
     git config -l
