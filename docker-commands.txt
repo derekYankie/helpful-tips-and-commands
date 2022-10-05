@@ -1,0 +1,7 @@
+Docker Commands 🐳
+
+Check if Docker is installed on machine...
+docker --version
+
+Start app container a specific localhost port...
+docker run --detach --publish 80:3001 my-node-js-app-ever
