@@ -1,4 +1,4 @@
-Github Commands 🐳
+Docker Commands 🐳
 
 Check if Docker is installed on machine...
 docker --version
