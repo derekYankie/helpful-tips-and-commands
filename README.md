@@ -4,6 +4,7 @@ This folder is a collection of helpful tips and commands I use for work
 - [Mac](#mac)
 - [Github](#github)
 - [AWS](#aws)
+- [Docker](#docker)
 
 # Mac   
 1. Copy current path to clipboard 💻
@@ -26,17 +27,21 @@ This folder is a collection of helpful tips and commands I use for work
 ---
 # AWS 
 1. Check IAM `account` or `role`☁️ 
-<a name="aws-cli"></a>
 
     ```bash
     aws sts get-caller-identity
     ```
 2. List instances 
-<a name="aws-cli"></a>
 
     ```bash
     aws ec2 describe-instances \
     --filters Name=availability-zone,Values=us-east-2c
     ```
 ---
+# Docker 
+1. List images before created before a specific image   
 
+    ```bash
+    docker images --filter "before=image1"
+    ```
+---
