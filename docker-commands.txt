@@ -1,7 +1,29 @@
 Docker Commands 🐳
 
-Check if Docker is installed on machine...
-docker --version
+Check if Docker is installed on my laptop...
+  docker --version
 
-Start app container a specific localhost port...
-docker run --detach --publish 80:3001 my-node-js-app-ever
+#############################
+# Docker Lifecycle Commands #
+############################
+Build a new container..
+  docker create really-cool-flask-app
+
+Start app container and specify localhost port...
+  docker run --detach --publish 80:3001 really-cool-flask-app
+
+Pause a running container..
+  docker pause really-cool-flask-app
+
+Stop and remove container
+  docker kill really-cool-flask-app
+
+#############################
+# Docker Image Commands     #
+############################
+
+
+#############################
+# Docker Compose Commands   #
+############################
+
