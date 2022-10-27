@@ -3,7 +3,13 @@ AWS Commands ☁️
 Check IAM account or role...
 aws sts get-caller-identity
 
-List Volumes showing attachment using Dictionary Notation
+Enable MFA delete on S3 Bucket:
+aws s3api put-bucket-versioning \
+    --bucket mybucketname \
+    --versioning--configuration Status=Enabled,MFADelete=Enabled \
+    --mfa "your-mfa-serial-number mfa-code" \
+
+List Volumes showing attachment using Dictionary Notation:
 aws ec2 describe-volumes \
   --query 'Volumes[*].{ID:VolumeId,InstanceId:Attachments[0].InstanceId,AZ:AvailabilityZone,Size:Size}
 
