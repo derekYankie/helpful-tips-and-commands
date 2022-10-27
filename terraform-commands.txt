@@ -1,0 +1,25 @@
+Terraform Commands 🏗
+
+Initialize Terraform working directory
+terraform init
+
+Generate an execution plan for AWS resources 
+terraform plan
+
+Watch Plan
+terraform plan | wc -l
+
+Format Terraform
+terraform fmt
+
+Also formats files in subdirectories
+terraform fmt --recursive
+
+Show details stored in Terraform state for aws resource
+terraform state show aws_instance.my_ec2
+
+Terminates All resources defined in your Terraform configuration file (very dangerous!!!)
+terraform destroy 
+
+Terminate a specific resource
+terraform destroy --target aws_instance.my_ec2_1
