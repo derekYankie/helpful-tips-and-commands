@@ -1,6 +1,7 @@
 # helpful-tips-and-commands
 This folder is a collection of helpful tips and commands I use for work
 ## Table of Contents
+- [Terraform](#terraform)
 - [Mac](#mac)
 - [Github](#github)
 - [AWS](#aws)
@@ -43,5 +44,12 @@ This folder is a collection of helpful tips and commands I use for work
 
     ```bash
     docker images --filter "before=image1"
+    ```
+---
+# Terraform  
+1. Watch terraform `plan` :building_construction:
+
+    ```bash
+    terraform plan | wc -l
     ```
 ---
