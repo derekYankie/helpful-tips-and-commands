@@ -6,6 +6,13 @@ This folder is a collection of helpful tips and commands I use for work
 - [Github](#github)
 - [AWS](#aws)
 - [Docker](#docker)
+---
+# Terraform  
+1. Watch terraform `plan` :building_construction:
+
+    ```bash
+    terraform plan | wc -l
+    ```
 
 # Mac   
 1. Copy current path to clipboard 💻
@@ -13,7 +20,7 @@ This folder is a collection of helpful tips and commands I use for work
     ```bash
     pwd | pbcopy
     ```
----
+
 # Github 
 1. Check Github `account` :octocat:
 
@@ -25,7 +32,7 @@ This folder is a collection of helpful tips and commands I use for work
     ```bash
     git rev-parse --abbrev-ref HEAD
     ```
----
+
 # AWS 
 1. Check IAM `account` or `role`☁️ 
 
@@ -38,18 +45,10 @@ This folder is a collection of helpful tips and commands I use for work
     aws ec2 describe-instances \
     --filters Name=availability-zone,Values=us-east-2c
     ```
----
+
 # Docker 
 1. List images before created before a specific image   
 
     ```bash
     docker images --filter "before=image1"
     ```
----
-# Terraform  
-1. Watch terraform `plan` :building_construction:
-
-    ```bash
-    terraform plan | wc -l
-    ```
----
