@@ -2,9 +2,9 @@
 This folder is a collection of helpful tips and commands I use for work
 ## Table of Contents
 - [Terraform](#terraform)
-- [Mac](#mac)
-- [Github](#github)
 - [AWS](#aws)
+- [Github](#github)
+- [Mac](#mac)
 - [Docker](#docker)
 ---
 # Terraform  
@@ -13,12 +13,17 @@ This folder is a collection of helpful tips and commands I use for work
     ```bash
     terraform plan | wc -l
     ```
-
-# Mac   
-1. Copy current path to clipboard 💻
+# AWS 
+1. Check IAM `account` or `role`☁️ 
 
     ```bash
-    pwd | pbcopy
+    aws sts get-caller-identity
+    ```
+2. List instances 
+
+    ```bash
+    aws ec2 describe-instances \
+    --filters Name=availability-zone,Values=us-east-2c
     ```
 
 # Github 
@@ -32,18 +37,11 @@ This folder is a collection of helpful tips and commands I use for work
     ```bash
     git rev-parse --abbrev-ref HEAD
     ```
-
-# AWS 
-1. Check IAM `account` or `role`☁️ 
-
-    ```bash
-    aws sts get-caller-identity
-    ```
-2. List instances 
+# Mac   
+1. Copy current path to clipboard :clipboard:
 
     ```bash
-    aws ec2 describe-instances \
-    --filters Name=availability-zone,Values=us-east-2c
+    pwd | pbcopy
     ```
 
 # Docker 
