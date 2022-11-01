@@ -45,7 +45,7 @@ This folder is a collection of helpful tips and commands I use for work
     ```
 
 # Docker 
-1. List images before created before a specific image   
+1. List images before created before a specific image :whale:   
 
     ```bash
     docker images --filter "before=image1"
