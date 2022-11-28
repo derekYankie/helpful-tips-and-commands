@@ -5,9 +5,26 @@ aws sts get-caller-identity
 
 Enable MFA delete on S3 Bucket:
 aws s3api put-bucket-versioning \
-    --bucket mybucketname \
+    --bucket MyUniqueBucketName \
     --versioning--configuration Status=Enabled,MFADelete=Enabled \
     --mfa "your-mfa-serial-number mfa-code" \
+
+Reserve EC2 Spot Blocks:
+aws ec2 request-spot-instances \
+    --block-duration-minutes 360 \
+    --instance-count 5 \
+    --spot-price "0.25" ...
+
+Create a Spot Instance request:
+aws ec2 request-spot-instances \
+    --instance-count 3 \
+    --type "one-time" \
+    --launch-specification file://specification.json
+
+Find running Spot Instances:
+aws ec2 describe-spot-instance-requests \
+    --query "SpotInstanceRequests[*].{ID:InstanceId}"
+
 
 List Volumes showing attachment using Dictionary Notation:
 aws ec2 describe-volumes \
@@ -26,6 +43,6 @@ aws ec2 describe-instances --instance-ids i-abc123ef i-aaaZZ2468 --query "Reserv
 
 View all Route 53 record names and their type for a zone
 aws route53 list-resource-record-sets \
-      --hosted-zone-id HOSTED_ZONE_ID \
+    --hosted-zone-id HOSTED_ZONE_ID \
 	  --output text \
---query "ResourceRecordSets[].[join(': ',[Name,Type])]"
+    --query "ResourceRecordSets[].[join(': ',[Name,Type])]"
