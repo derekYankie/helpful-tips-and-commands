@@ -43,7 +43,11 @@ This folder is a collection of helpful tips and commands I use for work
     ```bash
     pwd | pbcopy
     ```
+2. Check Spotify Status :musical_note:
 
+    ```bash
+    curl -i https://open.spotify.com
+    ```
 # Docker 
 1. List images before created before a specific image :whale:   
 
