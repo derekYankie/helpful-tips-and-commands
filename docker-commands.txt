@@ -21,8 +21,12 @@ Stop and remove container
 #############################
 # Docker Image Commands     #
 ############################
+Build an image from a Dockerfile
+  docker image build
 
-
+Pull an image from a repo or a registry
+  docker pull ubuntu:20.04
+  docker pull <aws_account_id>.dkr.ecr.us-west-2.amazonaws.com/<repo_name>:<tag>s
 #############################
 # Docker Compose Commands   #
 ############################
