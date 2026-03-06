@@ -49,7 +49,7 @@ This folder is a collection of helpful tips and commands I use for work
     curl -i https://open.spotify.com
     ```
 # Docker 
-1. List images before created before a specific image :whale:   
+1. Lists all local Docker images that were created before a specific reference image :whale:   
 
     ```bash
     docker images --filter "before=image1"
