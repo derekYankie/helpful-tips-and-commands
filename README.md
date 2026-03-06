@@ -8,10 +8,10 @@ This folder is a collection of helpful tips and commands I use for work
 - [Docker](#docker)
 ---
 # Terraform  
-1. Watch terraform `plan` :building_construction:
+1. Terraform `plan` :building_construction:
 
     ```bash
-    terraform plan | wc -l
+    terraform plan
     ```
 # AWS 
 1. Check IAM `account` or `role`☁️ 
